@@ -20,10 +20,9 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+
     - name: Restore
-      run: cd saude
-    - name: Restore
-      run: dotnet restore saude.sln -c Release
+      run: dotnet restore src/saude/saude.sln -c Release
     - name: Lista a pasta
       run: ls
     - name: Build
