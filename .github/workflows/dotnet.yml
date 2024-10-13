@@ -24,10 +24,9 @@ jobs:
     - name: Restore
       run: dotnet restore 
       working-directory: ./src/saude
-      
-    - name: Lista a pasta
-      run: ls
     - name: Build
       run: dotnet build --no-restore saude.sln -c Release
+      working-directory: ./src/saude
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      working-directory: ./src/saude
