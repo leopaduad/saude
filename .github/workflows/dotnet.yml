@@ -20,7 +20,10 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-
+    - name: Mosta pasta
+      run: pwd
+    - name: Lista a pasta
+      run: ls
     - name: Build
       run: dotnet build --no-restore saude.sln -c Release
     - name: Test
