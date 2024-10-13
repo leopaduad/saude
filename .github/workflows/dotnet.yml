@@ -22,7 +22,8 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore
-      run: dotnet restore src/saude/saude.sln -c Release
+      run: dotnet restore saude.sln -c Release
+      working-directory: src/saude
     - name: Lista a pasta
       run: ls
     - name: Build
